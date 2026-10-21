@@ -1,0 +1,2903 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>질병관리청 (KDCA) - 건강한 국민, 가장 진보된 방역</title>
+  <meta name="description" content="대한민국 질병관리청(KDCA)의 주요 업무, 국민 맞춤 혜택 진단, 최신 보도자료 및 보건 동향을 애플 스타일의 정제된 인터페이스로 경험하세요.">
+  
+  <!-- CSS Stylesheet (Apple Design System) -->
+  <style>
+/* ==========================================================================
+   Apple Design System for 질병관리청 (KDCA)
+   - Inspired by Apple.com & Apple Human Interface Guidelines
+   - SF Pro / System Font, Glassmorphism, Squircle Radii, Generous Whitespace
+   - Apple Accent Blue (#0071e3), Off-White (#f5f5f7), Pure Black (#1d1d1f)
+   - Fully compatible with double-click (file://)
+   ========================================================================== */
+
+:root {
+  /* Apple Signature Color Palette */
+  --apple-black: #1d1d1f;
+  --apple-dark: #121214;
+  --apple-gray-text: #86868b;
+  --apple-gray-light: #6e6e73;
+  --apple-bg-base: #000000;
+  --apple-bg-page: #f5f5f7;
+  --apple-card-bg: #ffffff;
+  --apple-card-hover: #fafafc;
+  --apple-border: rgba(0, 0, 0, 0.08);
+  --apple-border-dark: rgba(255, 255, 255, 0.15);
+  
+  /* Apple Accent Colors */
+  --apple-blue: #0071e3;
+  --apple-blue-hover: #0077ed;
+  --apple-blue-light: #e8f2fc;
+  --apple-green: #34c759;
+  --apple-orange: #ff9500;
+  --apple-red: #ff3b30;
+  --apple-purple: #af52de;
+  --apple-teal: #30b0c7;
+
+  /* Apple Radii (Squircle feel) */
+  --radius-xs: 8px;
+  --radius-sm: 14px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --radius-pill: 980px;
+
+  /* Apple Shadows */
+  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.04);
+  --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.06);
+  --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.09);
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.06);
+
+  /* Apple Typography */
+  --font-apple: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Apple SD Gothic Neo", "Pretendard", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --ease-apple: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --transition: all 0.3s var(--ease-apple);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-apple);
+  color: var(--apple-black);
+  background-color: var(--apple-bg-page);
+  line-height: 1.5;
+  letter-spacing: -0.015em;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--apple-bg-page);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.container {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ==========================================================================
+   Apple Ribbons (상단 긴급 공지 & 1339 띠배너)
+   ========================================================================== */
+.emergency-banner {
+  background: #1d1d1f;
+  color: #f5f5f7;
+  padding: 10px 0;
+  font-size: 12px;
+  letter-spacing: -0.01em;
+  font-weight: 400;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.emergency-banner .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.banner-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.banner-tag {
+  background: var(--apple-blue);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.banner-right a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #2997ff;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.banner-right a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   Apple Global Navigation Bar (사파리 글래스모피즘)
+   ========================================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  transition: background-color 0.4s var(--ease-apple);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-symbol {
+  width: 28px;
+  height: 28px;
+  background: var(--apple-black);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  transition: transform 0.3s var(--ease-apple);
+}
+
+.brand:hover .brand-symbol {
+  transform: scale(1.05);
+}
+
+.brand-text h1 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--apple-black);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.brand-text span {
+  font-size: 9.5px;
+  color: var(--apple-gray-text);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 12px;
+  color: #424245;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  opacity: 0.85;
+}
+
+.nav-links a:hover {
+  color: var(--apple-blue);
+  opacity: 1;
+}
+
+.header-cta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-1339 {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--apple-blue);
+  color: #ffffff !important;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  transition: var(--transition);
+}
+
+.btn-1339:hover {
+  background: var(--apple-blue-hover);
+  transform: scale(1.02);
+}
+
+/* ==========================================================================
+   Hero Section (Apple Keynote Product Showcase Style)
+   ========================================================================== */
+.hero {
+  background: #ffffff;
+  padding: 100px 0 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--apple-border);
+}
+
+.hero-content {
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(0, 113, 227, 0.08);
+  color: var(--apple-blue);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.hero-title {
+  font-size: 64px;
+  line-height: 1.08;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  color: var(--apple-black);
+  margin-bottom: 22px;
+}
+
+.hero-title span {
+  background: linear-gradient(135deg, #0071e3 0%, #40c8e0 50%, #34c759 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-desc {
+  font-size: 21px;
+  line-height: 1.45;
+  color: var(--apple-gray-text);
+  font-weight: 400;
+  max-width: 680px;
+  margin: 0 auto 36px;
+  letter-spacing: -0.015em;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 64px;
+}
+
+/* Apple Style Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--apple-blue);
+  color: #ffffff !important;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  letter-spacing: -0.01em;
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  background: var(--apple-blue-hover);
+  transform: scale(1.02);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--apple-blue);
+  font-size: 16px;
+  font-weight: 400;
+  padding: 10px 16px;
+  letter-spacing: -0.01em;
+  transition: var(--transition);
+}
+
+.btn-secondary:hover {
+  text-decoration: underline;
+}
+
+.btn-secondary::after {
+  content: "›";
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* Hero Stats (Apple Spec Sheet Style) */
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding-top: 48px;
+  border-top: 1px solid var(--apple-border);
+}
+
+.stat-item {
+  text-align: center;
+  padding: 12px 8px;
+}
+
+.stat-val {
+  font-size: 44px;
+  font-weight: 700;
+  color: var(--apple-black);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  background: linear-gradient(180deg, #1d1d1f 0%, #424245 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat-lbl {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--apple-black);
+  margin-top: 6px;
+  letter-spacing: -0.01em;
+}
+
+.stat-desc {
+  font-size: 12px;
+  color: var(--apple-gray-text);
+  margin-top: 4px;
+  line-height: 1.35;
+}
+
+/* ==========================================================================
+   Section Global Styling (Apple Section Typography)
+   ========================================================================== */
+.section {
+  padding: 100px 0;
+}
+
+.section-alt {
+  background: #ffffff;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 56px;
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--apple-blue);
+  margin-bottom: 12px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-size: 44px;
+  font-weight: 700;
+  color: var(--apple-black);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+}
+
+.section-desc {
+  font-size: 18px;
+  color: var(--apple-gray-text);
+  line-height: 1.5;
+  letter-spacing: -0.015em;
+}
+
+/* ==========================================================================
+   Apple Bento Grid - "나의 맞춤 혜택 진단" (Benefit Survey)
+   ========================================================================== */
+.survey-section {
+  background: var(--apple-bg-page);
+}
+
+.survey-card-container {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--apple-border);
+}
+
+.survey-step-block {
+  margin-bottom: 40px;
+}
+
+.survey-step-block:last-of-type {
+  margin-bottom: 32px;
+}
+
+.survey-step-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.step-badge {
+  background: var(--apple-black);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.step-question {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--apple-black);
+  letter-spacing: -0.02em;
+}
+
+.step-hint {
+  font-size: 13px;
+  color: var(--apple-gray-text);
+  font-weight: 400;
+}
+
+/* Apple Squircle Option Cards */
+.survey-options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+}
+
+.survey-opt-card {
+  background: #f5f5f7;
+  border-radius: var(--radius-md);
+  padding: 22px 20px;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  border: 2px solid transparent;
+  position: relative;
+  user-select: none;
+}
+
+.survey-opt-card:hover {
+  background: #ebebee;
+  transform: scale(1.015);
+}
+
+.survey-opt-card.selected {
+  background: #ffffff;
+  border-color: var(--apple-blue);
+  box-shadow: 0 8px 24px rgba(0, 113, 227, 0.12);
+}
+
+.survey-opt-card.selected::after {
+  content: "✓";
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  width: 20px;
+  height: 20px;
+  background: var(--apple-blue);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.opt-icon {
+  font-size: 26px;
+  line-height: 1;
+}
+
+.opt-info {
+  flex-grow: 1;
+}
+
+.opt-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--apple-black);
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+
+.opt-desc {
+  font-size: 12px;
+  color: var(--apple-gray-text);
+  line-height: 1.4;
+}
+
+/* Apple Action Bar */
+.survey-actions-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding-top: 28px;
+  border-top: 1px solid var(--apple-border);
+}
+
+.btn-survey-submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--apple-blue);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 13px 28px;
+  border-radius: var(--radius-pill);
+  transition: var(--transition);
+}
+
+.btn-survey-submit:hover {
+  background: var(--apple-blue-hover);
+  transform: scale(1.02);
+}
+
+.btn-survey-reset {
+  background: #f5f5f7;
+  color: var(--apple-black);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 13px 22px;
+  border-radius: var(--radius-pill);
+  transition: var(--transition);
+}
+
+.btn-survey-reset:hover {
+  background: #e8e8ed;
+}
+
+/* Apple Style Results Box */
+.benefit-results-wrapper {
+  display: none;
+  margin-top: 44px;
+  animation: appleFadeIn 0.5s var(--ease-apple) forwards;
+}
+
+@keyframes appleFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.results-summary-banner {
+  background: #1d1d1f;
+  color: #f5f5f7;
+  padding: 28px 36px;
+  border-radius: var(--radius-lg);
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.summary-headline {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.summary-headline span {
+  color: #2997ff;
+}
+
+.summary-subtext {
+  font-size: 14px;
+  color: #a1a1a6;
+  margin-top: 4px;
+}
+
+.benefit-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.benefit-card {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  border: 1px solid var(--apple-border);
+  box-shadow: var(--shadow-subtle);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.benefit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.benefit-meta-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.benefit-cat-tag {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--apple-gray-light);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.benefit-badge-pill {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--apple-blue);
+  background: var(--apple-blue-light);
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.benefit-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--apple-black);
+  line-height: 1.35;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+
+.benefit-desc {
+  font-size: 14px;
+  color: var(--apple-gray-text);
+  line-height: 1.55;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.benefit-how-box {
+  background: #f5f5f7;
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  font-size: 12.5px;
+  color: #1d1d1f;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.benefit-how-box strong {
+  color: var(--apple-black);
+}
+
+.benefit-link-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--apple-blue);
+  font-size: 14px;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.benefit-link-cta:hover {
+  text-decoration: underline;
+}
+
+.benefit-link-cta::after {
+  content: "›";
+  font-size: 18px;
+  margin-left: 4px;
+}
+
+/* ==========================================================================
+   Section 1: Apple Bento Grid - 주요 5대 핵심 업무 (Core Duties)
+   ========================================================================== */
+.duties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.duty-card {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  border: 1px solid var(--apple-border);
+  box-shadow: var(--shadow-subtle);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.duty-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.duty-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.duty-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: #f5f5f7;
+  color: var(--apple-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.duty-card:hover .duty-icon-box {
+  background: var(--apple-blue-light);
+}
+
+.duty-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  background: #f5f5f7;
+  color: var(--apple-gray-light);
+  letter-spacing: 0.02em;
+}
+
+.duty-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--apple-black);
+  margin-bottom: 10px;
+  letter-spacing: -0.025em;
+  line-height: 1.3;
+}
+
+.duty-summary {
+  font-size: 14.5px;
+  color: var(--apple-gray-text);
+  margin-bottom: 22px;
+  line-height: 1.55;
+}
+
+.duty-details-list {
+  list-style: none;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.duty-details-list li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 13.5px;
+  color: #333336;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.duty-details-list li::before {
+  content: "•";
+  position: absolute;
+  left: 4px;
+  color: var(--apple-blue);
+  font-size: 16px;
+}
+
+.duty-tip-box {
+  background: #f5f5f7;
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  font-size: 12.5px;
+  color: var(--apple-gray-light);
+  line-height: 1.45;
+}
+
+/* ==========================================================================
+   Section 2: Apple Newsroom Style (최신 뉴스 및 공식 보도자료)
+   ========================================================================== */
+.news-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 8px;
+  background: #e8e8ed;
+  padding: 4px;
+  border-radius: var(--radius-pill);
+}
+
+.filter-btn {
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--apple-gray-light);
+  transition: var(--transition);
+}
+
+.filter-btn:hover {
+  color: var(--apple-black);
+}
+
+.filter-btn.active {
+  background: #ffffff;
+  color: var(--apple-black);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.search-box {
+  position: relative;
+  min-width: 260px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 9px 16px 9px 36px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--apple-border);
+  font-size: 13px;
+  background: #ffffff;
+  outline: none;
+  font-family: inherit;
+  transition: var(--transition);
+}
+
+.search-input:focus {
+  border-color: var(--apple-blue);
+  box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.15);
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--apple-gray-text);
+  pointer-events: none;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 22px;
+}
+
+.news-card {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 30px;
+  border: 1px solid var(--apple-border);
+  box-shadow: var(--shadow-subtle);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.news-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.news-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.news-source-tag {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--apple-gray-light);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.news-date {
+  font-size: 12px;
+  color: var(--apple-gray-text);
+}
+
+.news-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--apple-black);
+  line-height: 1.35;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+
+.news-summary {
+  font-size: 13.5px;
+  color: var(--apple-gray-text);
+  line-height: 1.55;
+  margin-bottom: 22px;
+  flex-grow: 1;
+}
+
+.news-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid var(--apple-border);
+}
+
+.news-badge {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--apple-gray-light);
+  background: #f5f5f7;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.news-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--apple-blue);
+}
+
+.news-link-btn:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   Section 3: Apple Watch / Health Watch Style (보건 동향 & 손씻기)
+   ========================================================================== */
+.trends-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.trends-list-card, .hygiene-guide-card {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  border: 1px solid var(--apple-border);
+  box-shadow: var(--shadow-subtle);
+}
+
+.card-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--apple-black);
+  margin-bottom: 22px;
+  letter-spacing: -0.02em;
+}
+
+.trend-item-row {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--apple-border);
+}
+
+.trend-item-row:last-child {
+  border-bottom: none;
+}
+
+.trend-header-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.trend-title-txt {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--apple-black);
+  letter-spacing: -0.01em;
+}
+
+.trend-status-tag {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+}
+
+.status-주의 { background: #ffebeb; color: var(--apple-red); }
+.status-관심 { background: #fff5e5; color: var(--apple-orange); }
+.status-경계 { background: #ffe4e4; color: #d70015; }
+.status-정보 { background: var(--apple-blue-light); color: var(--apple-blue); }
+
+.trend-desc-txt {
+  font-size: 13px;
+  color: var(--apple-gray-text);
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.trend-action-tip {
+  font-size: 12px;
+  color: var(--apple-black);
+  background: #f5f5f7;
+  padding: 6px 10px;
+  border-radius: var(--radius-xs);
+  font-weight: 500;
+}
+
+/* Apple Fitness Rings Inspired Steps */
+.hygiene-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.step-card {
+  background: #f5f5f7;
+  border-radius: var(--radius-md);
+  padding: 18px 12px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.step-card:hover {
+  background: #ebebee;
+  transform: scale(1.02);
+}
+
+.step-number {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+  border-radius: 50%;
+  background: var(--apple-black);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.step-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--apple-black);
+  margin-bottom: 4px;
+}
+
+.step-desc {
+  font-size: 11px;
+  color: var(--apple-gray-text);
+  line-height: 1.35;
+}
+
+/* ==========================================================================
+   Section 4: Apple Support Style (예방접종 가이드 & 퀴즈)
+   ========================================================================== */
+.interactive-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.tool-card {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  border: 1px solid var(--apple-border);
+  box-shadow: var(--shadow-subtle);
+}
+
+/* Apple Segmented Control Tabs */
+.tab-nav {
+  display: flex;
+  background: #e8e8ed;
+  padding: 4px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 24px;
+  overflow-x: auto;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 8px 14px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--apple-gray-light);
+  border-radius: var(--radius-pill);
+  transition: var(--transition);
+  white-space: nowrap;
+  text-align: center;
+}
+
+.tab-btn:hover {
+  color: var(--apple-black);
+}
+
+.tab-btn.active {
+  background: #ffffff;
+  color: var(--apple-black);
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.vaccine-content-box {
+  background: #f5f5f7;
+  border-radius: var(--radius-md);
+  padding: 24px;
+}
+
+.vaccine-content-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--apple-black);
+  margin-bottom: 6px;
+  letter-spacing: -0.015em;
+}
+
+.vaccine-content-desc {
+  font-size: 13.5px;
+  color: var(--apple-gray-text);
+  margin-bottom: 18px;
+}
+
+.vaccine-item-list {
+  list-style: none;
+}
+
+.vaccine-item-list li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 13.5px;
+  color: #333336;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.vaccine-item-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--apple-blue);
+  font-weight: 800;
+}
+
+/* Apple Quiz Box */
+.quiz-box {
+  background: #f5f5f7;
+  border-radius: var(--radius-md);
+  padding: 24px;
+}
+
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: var(--apple-gray-text);
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+
+.quiz-question-txt {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--apple-black);
+  line-height: 1.45;
+  margin-bottom: 22px;
+  min-height: 52px;
+  letter-spacing: -0.015em;
+}
+
+.quiz-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.btn-quiz-option {
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: var(--radius-pill);
+  background: #ffffff;
+  color: var(--apple-black);
+  border: 1px solid var(--apple-border);
+  box-shadow: var(--shadow-subtle);
+  transition: var(--transition);
+}
+
+.btn-quiz-option:hover {
+  background: #ffffff;
+  border-color: var(--apple-blue);
+  transform: scale(1.02);
+}
+
+.quiz-result-box {
+  display: none;
+  padding: 16px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 16px;
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+
+.quiz-result-box.correct {
+  background: #eafaf1;
+  color: #1b6338;
+}
+
+.quiz-result-box.wrong {
+  background: #ffebeb;
+  color: #c41c1c;
+}
+
+.btn-next-quiz {
+  width: 100%;
+  padding: 12px;
+  border-radius: var(--radius-pill);
+  background: var(--apple-black);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  display: none;
+  transition: var(--transition);
+}
+
+.btn-next-quiz:hover {
+  background: #333336;
+}
+
+/* ==========================================================================
+   Section 5: Apple Services Cards & 1339 Call Banner
+   ========================================================================== */
+.portals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  margin-bottom: 48px;
+}
+
+.portal-link-card {
+  background: #ffffff;
+  border-radius: var(--radius-md);
+  padding: 24px;
+  border: 1px solid var(--apple-border);
+  box-shadow: var(--shadow-subtle);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: var(--transition);
+}
+
+.portal-link-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card);
+}
+
+.portal-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #f5f5f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.portal-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--apple-black);
+  margin-bottom: 2px;
+}
+
+.portal-desc {
+  font-size: 12px;
+  color: var(--apple-gray-text);
+  line-height: 1.35;
+}
+
+/* 1339 Apple Banner */
+.callcenter-banner {
+  background: #1d1d1f;
+  color: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 48px 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  box-shadow: var(--shadow-card);
+}
+
+.callcenter-left h3 {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin-bottom: 8px;
+}
+
+.callcenter-left p {
+  font-size: 15px;
+  color: #a1a1a6;
+}
+
+.callcenter-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.callcenter-number {
+  font-size: 48px;
+  font-weight: 800;
+  color: #2997ff;
+  letter-spacing: -0.02em;
+}
+
+.btn-call-now {
+  background: #ffffff;
+  color: #1d1d1f;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 13px 26px;
+  border-radius: var(--radius-pill);
+  transition: var(--transition);
+}
+
+.btn-call-now:hover {
+  background: #f5f5f7;
+  transform: scale(1.02);
+}
+
+/* ==========================================================================
+   Apple Footer (Apple.com Subdued Monochrome Footer)
+   ========================================================================== */
+.site-footer {
+  background: #f5f5f7;
+  color: #86868b;
+  font-size: 12px;
+  padding: 40px 0 32px;
+  border-top: 1px solid var(--apple-border);
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 36px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.footer-brand h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--apple-black);
+  margin-bottom: 8px;
+}
+
+.footer-brand p {
+  line-height: 1.5;
+  max-width: 420px;
+}
+
+.footer-links-col h5 {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--apple-black);
+  margin-bottom: 10px;
+}
+
+.footer-links-col ul {
+  list-style: none;
+}
+
+.footer-links-col li {
+  margin-bottom: 6px;
+}
+
+.footer-links-col a:hover {
+  color: var(--apple-black);
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  padding-top: 20px;
+  border-top: 1px solid var(--apple-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 11px;
+}
+
+/* ==========================================================================
+   Responsive Media Queries
+   ========================================================================== */
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 48px;
+  }
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .trends-container, .interactive-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .nav-links {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 60px 0 40px;
+  }
+  .hero-title {
+    font-size: 36px;
+  }
+  .hero-desc {
+    font-size: 17px;
+  }
+  .hero-stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .survey-card-container {
+    padding: 24px;
+  }
+  .section {
+    padding: 60px 0;
+  }
+  .section-title {
+    font-size: 30px;
+  }
+  .callcenter-banner {
+    padding: 32px 24px;
+    text-align: center;
+    flex-direction: column;
+  }
+  .callcenter-right {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .callcenter-number {
+    font-size: 36px;
+  }
+  .hygiene-steps-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+</style>
+</head>
+<body>
+
+  <!-- 1. Apple Ribbon (상단 긴급 공지 & 1339 콜센터) -->
+  <aside class="emergency-banner" aria-label="긴급 공지 및 콜센터 안내">
+    <div class="container">
+      <div class="banner-left">
+        <span class="banner-tag">Notice</span>
+        <span>2026-2027절기 65세 이상 어르신 및 어린이 독감·코로나19 무료 예방접종이 진행 중입니다.</span>
+      </div>
+      <div class="banner-right">
+        <a href="tel:1339" title="1339 전화 연결">
+          감염병 24시간 전문상담 국번없이 <strong>1339 ›</strong>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 2. Apple Global Navigation Bar -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="brand-symbol" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="m9 12 2 2 4-4"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h1>질병관리청</h1>
+          <span>KDCA</span>
+        </div>
+      </div>
+
+      <nav aria-label="메인 메뉴">
+        <ul class="nav-links">
+          <li><a href="#about">개요</a></li>
+          <li><a href="#survey">맞춤 혜택</a></li>
+          <li><a href="#duties">주요 업무</a></li>
+          <li><a href="#news">뉴스룸</a></li>
+          <li><a href="#trends">보건 동향</a></li>
+          <li><a href="#interactive">가이드 & 퀴즈</a></li>
+          <li><a href="#portals">공식 서비스</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-cta">
+        <a href="tel:1339" class="btn-1339">
+          1339 상담
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. Apple Style Keynote Hero Section -->
+  <section class="hero" id="about">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-pill">
+          <span>건강한 국민, 안전한 사회</span>
+        </div>
+        <h2 class="hero-title">
+          보이지 않는 위협으로부터,<br>
+          <span>가장 진보된 방역 시스템.</span>
+        </h2>
+        <p class="hero-desc">
+          질병관리청은 24시간 실시간 감시와 선제적 위기대응, 생애주기 국가예방접종,
+          만성질환 연구를 통해 5천만 국민의 건강한 일상을 굳건히 지킵니다.
+        </p>
+        <div class="hero-actions">
+          <a href="#survey" class="btn-primary">
+            나의 맞춤 혜택 진단하기
+          </a>
+          <a href="#duties" class="btn-secondary">
+            주요 업무 살펴보기
+          </a>
+          <a href="#news" class="btn-secondary">
+            최신 뉴스룸
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Stats (Apple Spec Sheet) -->
+      <div class="hero-stats" id="hero-stats-container">
+        <!-- JS로 동적 렌더링 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Apple Bento Grid: 맞춤 혜택 진단 설문 / 체크리스트 -->
+  <section class="section survey-section" id="survey">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Benefit Finder</span>
+        <h3 class="section-title">당신을 위한 국가 지원. 한눈에.</h3>
+        <p class="section-desc">
+          나와 내 가족의 현재 상황을 가볍게 체크해 보세요.<br>
+          질병관리청이 제공하는 무료 백신, 진료비 지원, 신속 검역 등 최적의 맞춤 혜택을 즉시 찾아드립니다.
+        </p>
+      </div>
+
+      <!-- 설문 컨테이너 -->
+      <div class="survey-card-container">
+        <!-- 1단계: 생애주기 -->
+        <div class="survey-step-block">
+          <div class="survey-step-header">
+            <span class="step-badge">Step 1</span>
+            <h4 class="step-question">
+              현재 생애주기나 가족 형태를 선택해 주세요
+              <span class="step-hint">(1개 선택)</span>
+            </h4>
+          </div>
+          <div class="survey-options-grid" id="survey-lifestage-grid">
+            <!-- JS로 동적 렌더링 -->
+          </div>
+        </div>
+
+        <!-- 2단계: 상황 및 관심사 -->
+        <div class="survey-step-block">
+          <div class="survey-step-header">
+            <span class="step-badge">Step 2</span>
+            <h4 class="step-question">
+              현재 건강 상황이나 필요한 서비스가 있으신가요?
+              <span class="step-hint">(복수 선택 가능)</span>
+            </h4>
+          </div>
+          <div class="survey-options-grid" id="survey-interest-grid">
+            <!-- JS로 동적 렌더링 -->
+          </div>
+        </div>
+
+        <!-- 설문 액션 버튼 -->
+        <div class="survey-actions-bar">
+          <button type="button" class="btn-survey-submit" id="btn-survey-submit">
+            맞춤 혜택 확인하기
+          </button>
+          <button type="button" class="btn-survey-reset" id="btn-survey-reset">
+            선택 초기화
+          </button>
+        </div>
+      </div>
+
+      <!-- 설문 결과 영역 -->
+      <div class="benefit-results-wrapper" id="benefit-results-wrapper">
+        <div class="results-summary-banner">
+          <div>
+            <div class="summary-headline">
+              국민 맞춤 지원 혜택 총 <span id="results-count-num">0건</span>이 확인되었습니다.
+            </div>
+            <div class="summary-subtext" id="results-subtext-txt">
+              선택하신 조건에 맞춰 국가가 지원하는 서비스입니다.
+            </div>
+          </div>
+          <a href="#survey" class="btn-secondary" style="color: #2997ff;">
+            다시 진단하기
+          </a>
+        </div>
+
+        <div class="benefit-cards-grid" id="benefit-cards-container">
+          <!-- JS로 동적 렌더링 -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. 주요 5대 핵심 업무 (Apple Bento Grid) -->
+  <section class="section section-alt" id="duties">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Core Missions</span>
+        <h3 class="section-title">우리가 하는 일.<br>국민이 누리는 안전.</h3>
+        <p class="section-desc">
+          전문적이고 복잡한 보건의료 행정을 국민 누구나 쉽게 체감할 수 있도록 5가지 핵심 임무로 설계했습니다.
+        </p>
+      </div>
+
+      <div class="duties-grid" id="duties-grid">
+        <!-- JS로 동적 렌더링 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. 최신 뉴스룸 및 공식 보도자료 -->
+  <section class="section" id="news">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Newsroom</span>
+        <h3 class="section-title">최신 뉴스 & 보도자료</h3>
+        <p class="section-desc">
+          질병관리청의 공식 발표문과 주요 언론 보도 소식을 실시간으로 확인하고 원문 링크로 바로 연결할 수 있습니다.
+        </p>
+      </div>
+
+      <!-- 뉴스 필터 및 검색창 -->
+      <div class="news-controls">
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">전체</button>
+          <button class="filter-btn" data-filter="official">공식 보도자료</button>
+          <button class="filter-btn" data-filter="press">언론 보도</button>
+        </div>
+
+        <div class="search-box">
+          <svg class="search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="news-search-input" class="search-input" placeholder="키워드 검색 (예: 독감, 에볼라, C형간염)">
+        </div>
+      </div>
+
+      <!-- 뉴스 카드 그리드 -->
+      <div class="news-grid" id="news-grid">
+        <!-- JS로 동적 렌더링 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. 보건 동향 & 일상 건강 지침 -->
+  <section class="section section-alt" id="trends">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Health Watch</span>
+        <h3 class="section-title">실시간 보건 동향 & 건강 가이드</h3>
+        <p class="section-desc">
+          현재 집중 모니터링 중인 감염병 이슈와 일상에서 가장 강력한 예방 효과를 내는 6단계 위생 습관을 전합니다.
+        </p>
+      </div>
+
+      <div class="trends-container">
+        <!-- 보건 관리 이슈 -->
+        <div class="trends-list-card">
+          <h4 class="card-heading">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+              <line x1="12" y1="9" x2="12" y2="13"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+            현재 집중 관리 이슈
+          </h4>
+          <div id="trends-list-container">
+            <!-- JS로 동적 렌더링 -->
+          </div>
+        </div>
+
+        <!-- 손씻기 6단계 가이드 -->
+        <div class="hygiene-guide-card">
+          <h4 class="card-heading">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+            올바른 손 씻기 6단계 (30초의 기적)
+          </h4>
+          <p style="font-size: 13px; color: var(--apple-gray-text); margin-bottom: 12px;">
+            비누로 30초 이상 흐르는 물에 씻는 것만으로도 대부분의 감염병을 사전에 예방할 수 있습니다.
+          </p>
+
+          <div class="hygiene-steps-grid">
+            <div class="step-card">
+              <span class="step-number">1</span>
+              <div class="step-title">손바닥 비비기</div>
+              <div class="step-desc">손바닥을 마주 대고 문지릅니다.</div>
+            </div>
+            <div class="step-card">
+              <span class="step-number">2</span>
+              <div class="step-title">손등 문지르기</div>
+              <div class="step-desc">손등과 손바닥을 마주 대고 씻습니다.</div>
+            </div>
+            <div class="step-card">
+              <span class="step-number">3</span>
+              <div class="step-title">손가락 깍지</div>
+              <div class="step-desc">깍지를 끼고 사이사이를 닦아줍니다.</div>
+            </div>
+            <div class="step-card">
+              <span class="step-number">4</span>
+              <div class="step-title">손가락 돌리기</div>
+              <div class="step-desc">손가락을 마주잡고 긁듯이 비빕니다.</div>
+            </div>
+            <div class="step-card">
+              <span class="step-number">5</span>
+              <div class="step-title">엄지손가락</div>
+              <div class="step-desc">엄지손가락을 반대편 손으로 돌립니다.</div>
+            </div>
+            <div class="step-card">
+              <span class="step-number">6</span>
+              <div class="step-title">손톱 밑 씻기</div>
+              <div class="step-desc">손톱 밑을 손바닥에 문질러 세정합니다.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Apple Support Style: 예방접종 가이드 & 퀴즈 -->
+  <section class="section" id="interactive">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Interactive Guide</span>
+        <h3 class="section-title">스마트 접종 가이드 & 상식 퀴즈</h3>
+        <p class="section-desc">
+          내 연령대에 필요한 필수 백신을 확인하고, 헷갈리기 쉬운 건강 상식을 풀어보세요.
+        </p>
+      </div>
+
+      <div class="interactive-wrapper">
+        <!-- 1) 연령별 예방접종 가이드 -->
+        <div class="tool-card">
+          <h4 class="card-heading">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            생애주기별 필수 예방접종
+          </h4>
+
+          <div class="tab-nav">
+            <button class="tab-btn vaccine-tab-btn active" data-target="infant">영유아</button>
+            <button class="tab-btn vaccine-tab-btn" data-target="teen">청소년</button>
+            <button class="tab-btn vaccine-tab-btn" data-target="adult">성인</button>
+            <button class="tab-btn vaccine-tab-btn" data-target="senior">65세 이상</button>
+          </div>
+
+          <div id="vaccine-content-container">
+            <!-- JS로 동적 렌더링 -->
+          </div>
+        </div>
+
+        <!-- 2) 상식 OX 퀴즈 -->
+        <div class="tool-card">
+          <h4 class="card-heading">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+              <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg>
+            감염병 상식 OX 퀴즈
+          </h4>
+
+          <div class="quiz-box">
+            <div class="quiz-header">
+              <span id="quiz-number-indicator">Question 1 / 4</span>
+              <span>탭하여 정답 확인</span>
+            </div>
+            <div class="quiz-question-txt" id="quiz-question-txt">
+              문제를 불러오는 중입니다...
+            </div>
+            <div class="quiz-buttons">
+              <button class="btn-quiz-option" id="btn-quiz-o">O (그렇다)</button>
+              <button class="btn-quiz-option" id="btn-quiz-x">X (아니다)</button>
+            </div>
+            <div class="quiz-result-box" id="quiz-result-box"></div>
+            <button class="btn-next-quiz" id="btn-next-quiz">다음 문제 풀기 ›</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. 공식 서비스 포털 바로가기 및 1339 콜센터 배너 -->
+  <section class="section section-alt" id="portals">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Ecosystem</span>
+        <h3 class="section-title">질병관리청 공식 서비스</h3>
+        <p class="section-desc">
+          예방접종 기록 조회부터 입국 검역까지, 국민의 건강한 일상을 돕는 공식 디지털 플랫폼입니다.
+        </p>
+      </div>
+
+      <div class="portals-grid">
+        <a href="https://nip.kdca.go.kr" target="_blank" rel="noopener noreferrer" class="portal-link-card">
+          <div class="portal-icon">💉</div>
+          <div>
+            <div class="portal-title">예방접종도우미</div>
+            <div class="portal-desc">접종 내역 조회 및 의료기관 찾기</div>
+          </div>
+        </a>
+
+        <a href="https://dportal.kdca.go.kr" target="_blank" rel="noopener noreferrer" class="portal-link-card">
+          <div class="portal-icon">📊</div>
+          <div>
+            <div class="portal-title">감염병포털</div>
+            <div class="portal-desc">법정감염병 발생 현황 및 표본감시 통계</div>
+          </div>
+        </a>
+
+        <a href="https://qcode.kdca.go.kr" target="_blank" rel="noopener noreferrer" class="portal-link-card">
+          <div class="portal-icon">✈️</div>
+          <div>
+            <div class="portal-title">전자검역 Q-CODE</div>
+            <div class="portal-desc">해외 입국 전 건강상태 모바일 간편 입력</div>
+          </div>
+        </a>
+
+        <a href="https://overseasinfections.kdca.go.kr" target="_blank" rel="noopener noreferrer" class="portal-link-card">
+          <div class="portal-icon">🌍</div>
+          <div>
+            <div class="portal-title">해외감염병NOW</div>
+            <div class="portal-desc">국가별 유행 감염병 정보 및 여행자 주의보</div>
+          </div>
+        </a>
+      </div>
+
+      <!-- 1339 콜센터 배너 (Apple Dark Mode Style) -->
+      <div class="callcenter-banner">
+        <div class="callcenter-left">
+          <h3>감염병이 의심될 땐 언제나 1339</h3>
+          <p>365일 24시간 연중무휴 전문 상담사가 1:1로 신속하고 안전한 대처법을 안내합니다.</p>
+        </div>
+        <div class="callcenter-right">
+          <div class="callcenter-number">1339</div>
+          <a href="tel:1339" class="btn-call-now">전화 상담하기</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Apple Subdued Monochrome Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h4>질병관리청 (KDCA)</h4>
+          <p>
+            대한민국 보건안보의 컨트롤타워.<br>
+            감염병 위기 대응과 만성질환 예방, 보건의료 첨단연구로 건강한 미래를 이끌어갑니다.
+          </p>
+        </div>
+        <div class="footer-links-col">
+          <h5>바로가기</h5>
+          <ul>
+            <li><a href="#about">기관 개요</a></li>
+            <li><a href="#survey">맞춤 혜택 진단</a></li>
+            <li><a href="#duties">주요 업무</a></li>
+            <li><a href="#news">뉴스룸</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h5>공식 웹사이트</h5>
+          <ul>
+            <li><a href="https://www.kdca.go.kr" target="_blank" rel="noopener noreferrer">질병관리청 누리집 ↗</a></li>
+            <li><a href="https://nip.kdca.go.kr" target="_blank" rel="noopener noreferrer">예방접종도우미 ↗</a></li>
+            <li><a href="https://www.korea.kr" target="_blank" rel="noopener noreferrer">대한민국 정책브리핑 ↗</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          (28159) 충청북도 청주시 흥덕구 오송읍 오송생명2로 187 질병관리청 | 국번없이 1339
+        </div>
+        <div>
+          Copyright © 2026 Korea Disease Control and Prevention Agency. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+// 질병관리청 소개 웹 앱 - 주요 데이터 모음
+const KDCA_DATA = {
+  // 기관 개요
+  overview: {
+    name: "질병관리청 (KDCA)",
+    englishName: "Korea Disease Control and Prevention Agency",
+    slogan: "건강한 국민, 안전한 사회",
+    established: "2020년 9월 12일 청 승격 (2004년 질병관리본부 출범)",
+    mission: "감염병으로부터 국민의 생명과 안전을 보호하고, 만성질환 예방관리 및 보건의료 연구를 통해 국민 건강수명을 연장합니다.",
+    callCenter: "1339",
+    stats: [
+      { label: "국가 감시 감염병", value: "89종", desc: "1~4급 법정감염병 24시간 실시간 감시" },
+      { label: "국가예방접종 지원", value: "18종", desc: "어린이 및 고위험군 무료 백신 지원" },
+      { label: "권역 질병대응센터", value: "5개 권역", desc: "수도권·충청·호남·경북·경남 권역 현장 대응" },
+      { label: "대국민 건강상담 1339", value: "365일 24시간", desc: "감염병 상담 및 질병 정보 무료 제공" }
+    ]
+  },
+
+  // 주요 5대 핵심 업무 (국민 친화적 쉬운 설명)
+  coreDuties: [
+    {
+      id: "duty-epidemic",
+      badge: "핵심 방역",
+      title: "감염병 24시간 감시 및 신속 위기대응",
+      icon: "shield-virus",
+      summary: "국내외 감염병 발생을 365일 24시간 모니터링하고 역학조사를 통해 전파를 조기에 차단합니다.",
+      details: [
+        "1~4급 법정감염병(코로나19, 인플루엔자, 엠폭스 등) 실시간 감시체계 가동",
+        "신종 감염병 출현 시 즉각 현장 역학조사반(Epi) 급파 및 접촉자 추적 격리",
+        "국가 감염병 위기 단계(관심 → 주의 → 경계 → 심각) 발령 및 범정부 대응 총괄",
+        "음압격리병상 및 치료제 국가 비축물자 확보·관리"
+      ],
+      tip: "💡 감염병 의심 증상이 발생하면 병원 방문 전 1339로 먼저 상담하세요!"
+    },
+    {
+      id: "duty-vaccine",
+      badge: "건강 보호",
+      title: "국가예방접종(NIP) 생애주기 관리",
+      icon: "syringe",
+      summary: "영유아부터 어르신까지 감염병을 사전에 막을 수 있도록 안전한 백신 접종을 지원합니다.",
+      details: [
+        "영유아 B형간염, 홍역, 수두 등 18종 국가필수예방접종 전액 무료 지원",
+        "어르신(65세 이상), 어린이, 임신부 대상 독감(인플루엔자) 및 코로나19 무료 접종",
+        "백신 이상반응 신속 대응 및 피해 국가보상 제도 운영",
+        "모바일 '예방접종도우미' 사이트를 통한 본인·자녀 접종 기록 및 일정 조회"
+      ],
+      tip: "💡 예방접종도우미(nip.kdca.go.kr)에서 나와 우리 아이 접종 이력을 한 번에 조회할 수 있어요."
+    },
+    {
+      id: "duty-chronic",
+      badge: "생활 건강",
+      title: "만성질환 예방 & 국민건강영양조사",
+      icon: "heart-pulse",
+      summary: "고혈압, 당뇨, 심뇌혈관질환 등 주요 만성질환을 사전에 예방하고 국민 건강통계를 수립합니다.",
+      details: [
+        "한국인 주요 사망원인인 고혈압·당뇨병 조기 발견 및 등록관리 사업",
+        "매년 국민 1만여 명 대상 '국민건강영양조사' 실시로 대한민국 대표 건강지표 산출",
+        "흡연, 음주, 신체활동 부족 등 만성질환 위험 요인 개선 캠페인",
+        "희귀질환자 의료비 지원 및 국가 등록 통계 체계 운영"
+      ],
+      tip: "💡 정기 건강검진과 올바른 식습관, 하루 30분 걷기만으로 만성질환의 80%를 예방할 수 있습니다."
+    },
+    {
+      id: "duty-quarantine",
+      badge: "국경 방어",
+      title: "공항·항만 국경검역 및 해외 감염병 유입 차단",
+      icon: "plane-arrival",
+      summary: "국제공항과 항만에서 해외 신종 감염병이 국내로 유입되지 않도록 국경 검역망을 지킵니다.",
+      details: [
+        "전국 13개 국립검역소를 통한 입국자 발열 감시 및 유증상자 정밀 진단",
+        "모바일 전자검역 시스템 'Q-CODE(큐코드)'를 통한 신속 스마트 검역",
+        "세계 감염병 발생 정보 실시간 수집 및 '검역관리지역' 지정 고시",
+        "해외 유입 매개체(모기, 설치류 등) 및 병원체 바이오 검역 감시"
+      ],
+      tip: "💡 입국 전 모바일 Q-CODE를 사전 등록해두면 입국 대기시간을 대폭 단축할 수 있습니다."
+    },
+    {
+      id: "duty-nih",
+      badge: "보건 과학",
+      title: "국립보건연구원 보건의료 R&D 및 첨단연구",
+      icon: "microscope",
+      summary: "백신·치료제 연구개발, 한국인 맞춤형 유전체 분석 및 보건의료 연구 인프라를 구축합니다.",
+      details: [
+        "신변종 감염병 대응 mRNA 백신 플랫폼 및 항바이러스제 원천 연구",
+        "한국인체자원은행 네트워크 운영을 통한 바이오 빅데이터 연구 지원",
+        "국가 바이오 빅데이터 구축(100만 명 유전체·임상 데이터 분석 인프라)",
+        "국가 감염병 연구 컨트롤타워(국립감염병연구소) 가동"
+      ],
+      tip: "💡 차세대 팬데믹에 선제 대응하기 위해 '100일/200일 백신·치료제 개발 전략'을 추진하고 있습니다."
+    }
+  ],
+
+  // 최신 보건 동향 및 계절별 건강 가이드
+  trends: [
+    {
+      title: "2026-2027 절기 어르신·어린이 독감 및 코로나19 백신 동시 접종",
+      period: "현재 진행 중",
+      severity: "주의",
+      content: "겨울철 호흡기 감염병 동시 유행(트윈데믹)에 대비해 65세 이상 어르신과 어린이, 면역저하자 대상 무료 백신 접종이 진행 중입니다. 양팔에 각 1대씩 동시 접종이 권장됩니다.",
+      action: "지정 의료기관 방문 전 백신 잔여량 확인 및 신분증 지참"
+    },
+    {
+      title: "의료기관 C형 간염 집단감염 예방 및 전수 정밀 감시 강화",
+      period: "상시 강화",
+      severity: "관심",
+      content: "혈액 투석실 및 수술실 등 의료기관 내 주사기·투석장비 재사용 금지 및 무균 조작 원칙을 강력히 권고하며, 지자체 합동 불시 위생점검을 시행하고 있습니다.",
+      action: "의료기관 방문 시 1회용 주사기 사용 및 위생 수칙 확인"
+    },
+    {
+      title: "해외 감염병(에볼라·니파 등) 입국 검역 모니터링 체계 가동",
+      period: "연중 상시",
+      severity: "경계",
+      content: "아프리카 및 동남아 일부 지역의 고위험 풍토 감염병 발생 추이를 감시하며 중점검역관리지역을 탄력적으로 지정하고 있습니다.",
+      action: "출국 전 해외감염병NOW(overseasinfections.kdca.go.kr)에서 유행 정보 사전 확인"
+    },
+    {
+      title: "국민 일상 감염병 예방 5대 수칙 실천 캠페인",
+      period: "연중 상시",
+      severity: "정보",
+      content: "비누로 30초 이상 흐르는 물에 손 씻기, 기침 예절 준수, 주기적인 실내 환기, 아플 땐 집에서 휴식 취하기 등 일상 속 작은 습관이 건강을 지킵니다.",
+      action: "외출 후·식사 전 반드시 비누를 사용하여 손바닥, 손가락 사이 꼼꼼히 세정"
+    }
+  ],
+
+  // 최신 뉴스 기사 및 공식 보도자료 URL 목록
+  newsList: [
+    {
+      id: 1,
+      source: "대한민국 정책브리핑 (korea.kr)",
+      sourceType: "official",
+      date: "2026.10.18",
+      title: "65세 이상 어르신 인플루엔자 및 코로나19 백신 국가예방접종 전국 순차 시작",
+      summary: "질병관리청은 겨울철 감염병 재유행을 선제적으로 예방하기 위해 고위험군인 65세 이상 어르신을 대상으로 독감과 코로나19 무료 예방접종을 권장하고 지정 병의원에서 일제히 시작했습니다.",
+      url: "https://www.korea.kr/briefing/pressReleaseList.do",
+      directArticleUrl: "https://www.korea.kr",
+      badge: "예방접종"
+    },
+    {
+      id: 2,
+      source: "질병관리청 공식 보도자료",
+      sourceType: "official",
+      date: "2026.10.16",
+      title: "경남 지역 의료기관 투석실 C형간염 확인에 따른 신속 역학조사 및 전국 점검",
+      summary: "경남 소재 모 병원 투석실에서 C형간염 감염이 확인됨에 따라 질병청과 관할 지자체가 역학조사반을 투입, 역학적 연관성을 규명하고 전국 혈액투석 의료기관에 감염관리 강화를 긴급 지시했습니다.",
+      url: "https://www.kdca.go.kr/board/board.es?mid=a20501000000&bid=0015",
+      directArticleUrl: "https://www.kdca.go.kr",
+      badge: "역학조사"
+    },
+    {
+      id: 3,
+      source: "연합뉴스TV",
+      sourceType: "press",
+      date: "2026.10.15",
+      title: "\"독감 유행 전 접종 서두르세요\"... 취약계층·어린이 접종 당부",
+      summary: "질병관리청은 인플루엔자 바이러스 유행 시기가 평년보다 다소 빨라지고 있다며, 항체 생성에 약 2주가 소요되는 만큼 고령층과 만성질환자의 조기 접종 참여를 거듭 강조했습니다.",
+      url: "https://www.yonhapnewstv.co.kr/news/search?query=%EC%A7%88%EB%B3%91%EA%B4%80%EB%A6%AC%EC%B2%AD+%EB%8F%85%EA%B0%90+%EC%98%88%EB%B0%A9%EC%A0%91%EC%A2%85",
+      directArticleUrl: "https://www.yonhapnewstv.co.kr",
+      badge: "언론보도"
+    },
+    {
+      id: 4,
+      source: "서울신문",
+      sourceType: "press",
+      date: "2026.10.12",
+      title: "코로나19 예방접종 피해보상 '특례 이의신청' 10월 23일 마감... 기한 내 신청 당부",
+      summary: "특별법 개정에 따라 보상 기준이 완화된 코로나19 백신 피해사례에 대한 재심의 특례 접수가 곧 마감됩니다. 질병청은 대상 국민들이 관할 보건소에 빠짐없이 신청할 수 있도록 안내했습니다.",
+      url: "https://www.seoul.co.kr",
+      directArticleUrl: "https://www.seoul.co.kr",
+      badge: "피해보상"
+    },
+    {
+      id: 5,
+      source: "대한민국 정책브리핑 (korea.kr)",
+      sourceType: "official",
+      date: "2026.10.08",
+      title: "아프리카 케냐 에볼라 유입 방지 위해 '중점검역관리지역' 지정 및 공항만 검역망 강화",
+      summary: "해외 에볼라바이러스병 발생 상황에 선제적으로 대응하여 케냐를 중점검역관리지역으로 추가 지정하고, 입국 시 Q-CODE 발열 체크 및 사후 모니터링을 빈틈없이 가동합니다.",
+      url: "https://www.korea.kr",
+      directArticleUrl: "https://www.korea.kr",
+      badge: "검역안전"
+    },
+    {
+      id: 6,
+      source: "동아일보 / 조선일보",
+      sourceType: "press",
+      date: "2026.09.28",
+      title: "질병관리청·행안부·복지부, 신종 감염병 위기대응 범정부 도상 훈련 실시",
+      summary: "미지의 신종 감염병인 '감염병 X(Disease X)' 출현 가상 시나리오를 바탕으로 초기 역학조사, 백신 신속 수급, 병상 배정 등 범부처 대응체계를 종합 점검했습니다.",
+      url: "https://www.donga.com",
+      directArticleUrl: "https://www.chosun.com",
+      badge: "위기대응"
+    },
+    {
+      id: 7,
+      source: "대한민국 정책브리핑 (korea.kr)",
+      sourceType: "official",
+      date: "2026.09.19",
+      title: "2026년 상반기 감염병 예방행태 실태조사: 비누 사용 손씻기 실천율 향상 필요",
+      summary: "공중화장실 이용자 관찰 조사 결과, 용변 후 비누로 30초 이상 손을 씻는 국민 비율이 여전히 30%대에 머물러 지속적인 국민 인식 개선 및 올바른 손씻기 교육을 전개합니다.",
+      url: "https://www.korea.kr",
+      directArticleUrl: "https://www.korea.kr",
+      badge: "보건통계"
+    },
+    {
+      id: 8,
+      source: "질병관리청 공식 포털",
+      sourceType: "official",
+      date: "상시 업데이트",
+      title: "질병관리청 실시간 보도자료 및 감염병 발생 동향 브리핑 전체보기",
+      summary: "질병관리청 누리집 알림·자료 게시판에서 배포되는 공식 발표문, 카드뉴스, 감염병 통계 주간 브리핑 원문을 확인하실 수 있습니다.",
+      url: "https://www.kdca.go.kr/board/board.es?mid=a20501000000&bid=0015",
+      directArticleUrl: "https://www.kdca.go.kr",
+      badge: "공식포털"
+    }
+  ],
+
+  // 국민 유익 상식 퀴즈 (인터랙티브 기능)
+  quiz: [
+    {
+      q: "독감(인플루엔자) 백신을 맞으면 코로나19까지 함께 예방된다?",
+      answer: false,
+      explanation: "X (오답입니다!) 독감 바이러스와 코로나19 바이러스는 완전히 다른 바이러스이므로, 고위험군은 두 백신을 각각 접종받아야 안전합니다. 동시 접종이 가능합니다."
+    },
+    {
+      q: "올바른 손 씻기는 흐르는 물에 비누로 최소 30초 이상 씻어야 효과가 있다?",
+      answer: true,
+      explanation: "O (정답입니다!) 손바닥, 손등, 손가락 사이, 두 손 모아 비비기, 엄지손가락, 손톱 밑까지 6단계를 거쳐 30초 이상 비누로 씻어야 세균과 바이러스를 99% 이상 제거할 수 있습니다."
+    },
+    {
+      q: "질병관리청 감염병 전문 상담 콜센터 번호는 국번 없이 '1339'이다?",
+      answer: true,
+      explanation: "O (정답입니다!) 1339는 365일 24시간 연중무휴로 운영되며, 감염병 증상 상담, 예방접종 안내, 해외여행 검역 정보 등을 친절히 안내합니다."
+    },
+    {
+      q: "해외여행 후 입국할 때 Q-CODE(전자검역)는 외국인만 작성하는 것이다?",
+      answer: false,
+      explanation: "X (오답입니다!) 대한민국 국민도 해외에서 입국할 때 Q-CODE를 통해 건강상태를 사전에 입력하면 공항에서 줄 서지 않고 신속하게 입국 검역을 통과할 수 있습니다."
+    }
+  ],
+
+  // 연령대별 예방접종 간이 진단 데이터
+  vaccineGuide: {
+    infant: {
+      title: "👶 영유아 및 어린이 (만 12세 이하)",
+      desc: "생애 초기 면역 형성을 위한 필수 예방접종",
+      items: [
+        "BCG(결핵), B형간염, DTaP(디프테리아·파상풍·백일해)",
+        "MMR(홍역·유행성이하선염·풍진), 수두, 일본뇌염",
+        "인플루엔자(독감) 매년 무료 접종 지원 (생후 6개월~만 13세)"
+      ]
+    },
+    teen: {
+      title: "🧑 청소년 (만 13~18세)",
+      desc: "집단생활 중 감염 확산을 막는 권장 접종",
+      items: [
+        "사람유두종바이러스(HPV) 감염증 예방접종 (여성 청소년 지원)",
+        "Td/Tdap(파상풍·디프테리아·백일해) 11~12세 추가 접종",
+        "인플루엔자(독감) 접종 권장"
+      ]
+    },
+    adult: {
+      title: "🧑‍💼 성인 (만 19~64세)",
+      desc: "만성질환 위험 및 업무 환경에 따른 맞춤형 접종",
+      items: [
+        "A형/B형 간염 항체 미형성자 예방접종",
+        "파상풍·디프테리아·백일해(Tdap) 10년 주기 추가 접종",
+        "임신부: 매 임신 시 Tdap 및 동절기 독감 접종",
+        "해외 출국 시: 황열, 콜레라, 장티푸스 등 유행지 위험 백신"
+      ]
+    },
+    senior: {
+      title: "🧓 65세 이상 어르신",
+      desc: "중증화 및 합병증 예방을 위한 국가 무료 지원 접종",
+      items: [
+        "인플루엔자(독감) 매년 가을 전액 무료 접종",
+        "코로나19 신규 변이 백신 매년 무료 접종 (독감과 동시 접종 권고)",
+        "폐렴구균 23가 다당질 백신 1회 무료 지원",
+        "대상포진 예방접종 (지자체 지원 여부 확인 필요)"
+      ]
+    }
+  },
+
+  // "나는 이 기관으로부터 어떤 도움을 받을 수 있을까?" 국민 맞춤 혜택 설문 데이터
+  survey: {
+    // 1단계: 생애주기/가족 형태 (단일 선택)
+    lifeStages: [
+      { id: "child_parent", icon: "👶", title: "영유아·어린이 부모", desc: "만 12세 이하 자녀가 있는 가정" },
+      { id: "senior", icon: "🧓", title: "65세 이상 어르신", desc: "본인 또는 부양 중인 고령층 가족" },
+      { id: "pregnant", icon: "🤰", title: "임신부 / 출산 준비", desc: "임신 중이거나 출산을 준비 중인 분" },
+      { id: "adult", icon: "🧑‍💼", title: "일반 성인 / 청년", desc: "만 19~64세 일반 국민 및 직장인" }
+    ],
+
+    // 2단계: 상황 및 관심사 체크리스트 (복수 선택)
+    interests: [
+      { id: "travel", icon: "✈️", title: "해외여행 / 출장 예정", desc: "해외 출국 계획이 있거나 귀국 예정" },
+      { id: "chronic", icon: "🩺", title: "만성질환 (혈압·혈당 관리)", desc: "고혈압·당뇨병 예방 및 질환 관리 필요" },
+      { id: "symptoms", icon: "🤒", title: "감염병 의심 증상 / 진단", desc: "발열, 발진, 기침 등 이상 증상 상담 필요" },
+      { id: "vaccine_support", icon: "💉", title: "백신 접종 및 피해보상", desc: "접종 이력 증명서나 이상반응 보상 상담" },
+      { id: "health_data", icon: "📊", title: "공인 건강정보 & 통계", desc: "국가가 검증한 질병 의학정보 및 영양 통계" }
+    ],
+
+    // 매핑되는 맞춤 혜택 목록
+    benefits: {
+      child_parent: {
+        category: "영유아·어린이",
+        badge: "100% 무료",
+        title: "어린이 국가필수예방접종 18종 전액 무료 지원",
+        desc: "결핵(BCG), B형간염, 수두, 홍역(MMR) 등 만 12세 이하 어린이가 필수적으로 맞아야 하는 18종 백신 비용을 국가가 전액 부담합니다.",
+        howToUse: "전국 지정 위탁의료기관 및 보건소 어디서나 신분증 지참 후 무료 접종",
+        linkText: "예방접종도우미에서 우리아이 접종일정 보기 ↗",
+        linkUrl: "https://nip.kdca.go.kr"
+      },
+      child_notice: {
+        category: "영유아·어린이",
+        badge: "모바일 알림",
+        title: "영유아 예방접종 사전 알림 및 모바일 아기수첩",
+        desc: "접종 시기를 놓치지 않도록 사전에 카카오톡/문자 알림을 발송하며, 취학 전 필수접종 완료 여부를 자동으로 전산 확인해 드립니다.",
+        howToUse: "예방접종도우미 누리집 또는 앱에서 자녀 등록 후 알림 수신 동의",
+        linkText: "자녀 접종내역 전산 등록 바로가기 ↗",
+        linkUrl: "https://nip.kdca.go.kr"
+      },
+      senior_vaccine: {
+        category: "어르신 건강",
+        badge: "국가 전액 지원",
+        title: "어르신 인플루엔자(독감) · 코로나19 · 폐렴구균 무료 접종",
+        desc: "만 65세 이상 어르신을 위해 매년 가을 독감 및 신규 코로나19 백신을 무료 접종해 드립니다. 또한 평생 1회 폐렴구균 23가 백신을 무상 지원합니다.",
+        howToUse: "주민등록상 65세 이상이면 주소지 관계없이 전국 위탁의료기관에서 신분증 제시 후 접종",
+        linkText: "가까운 어르신 무료 접종기관 찾기 ↗",
+        linkUrl: "https://nip.kdca.go.kr"
+      },
+      pregnant_support: {
+        category: "임신부 지원",
+        badge: "모자 보건",
+        title: "임신부 인플루엔자(독감) 및 Tdap(백일해) 무료 접종",
+        desc: "태아와 산모 모두의 호흡기 감염병 합병증을 막기 위해 임신 주수에 상관없이 인플루엔자 백신을 전액 국비로 무료 접종 지원합니다.",
+        howToUse: "산모수첩 또는 임신확인서를 지참하여 지정 산부인과/병원 방문",
+        linkText: "임신부 접종 의료기관 조회 ↗",
+        linkUrl: "https://nip.kdca.go.kr"
+      },
+      travel: {
+        category: "해외 검역",
+        badge: "출입국 편의",
+        title: "모바일 전자검역 Q-CODE 및 국가별 해외감염병NOW 정보",
+        desc: "출국 전 방문국의 감염병 유행 정보와 주의사항을 실시간으로 확인하고, 귀국 시 모바일 Q-CODE를 사전 작성하여 공항 검역 대기시간 없이 1분 만에 통과할 수 있습니다.",
+        howToUse: "항공기 탑승 전 스마트폰으로 Q-CODE 입력 후 생성된 QR코드 제시",
+        linkText: "Q-CODE 모바일 사전입력 바로가기 ↗",
+        linkUrl: "https://qcode.kdca.go.kr"
+      },
+      travel_vaccine: {
+        category: "해외 검역",
+        badge: "공인 증명서",
+        title: "황열 · 콜레라 등 국제공인예방접종 증명서 발급",
+        desc: "아프리카, 남미 등 특정 국가 입국 시 필수 요구되는 황열·콜레라 백신 접종 및 옐로카드(국제공인증명서)를 국립검역소 및 지정 병원에서 발급받을 수 있습니다.",
+        howToUse: "출국 최소 10일 전 국립인천공항검역소 또는 지정 의료기관 예약 접종",
+        linkText: "해외감염병NOW 안전 여행 정보 ↗",
+        linkUrl: "https://overseasinfections.kdca.go.kr"
+      },
+      chronic: {
+        category: "만성질환",
+        badge: "생활 건강",
+        title: "고혈압·당뇨병 등록관리 및 의료비·약제비 지원 (지자체 연계)",
+        desc: "만 65세 이상 고혈압·당뇨병 환자에게 매월 진료비(1,500원)와 약제비(질환당 2,000원)를 지원하고, 보건소와 함께 1:1 영양·운동 건강코칭을 제공합니다.",
+        howToUse: "참여 병의원에서 고혈압·당뇨병 등록 신청 또는 관할 보건소 문의",
+        linkText: "국가건강정보포털 만성질환 가이드 ↗",
+        linkUrl: "https://health.kdca.go.kr"
+      },
+      symptoms: {
+        category: "긴급 상담",
+        badge: "24시간 무료",
+        title: "국번없이 1339 감염병 원스톱 상담 및 선별 의료기관 안내",
+        desc: "원인 불명의 고열, 호흡기 증상, 해외 유입 감염병이 의심될 때 365일 24시간 질병관리청 전문 상담원이 즉각 초기 대처법과 진료 가능 병원을 1:1로 안내합니다.",
+        howToUse: "스마트폰이나 일반 전화에서 국번 없이 1339 누르기 (통화료 무료)",
+        linkText: "1339 감염병 전문콜센터 안내 ↗",
+        linkUrl: "tel:1339"
+      },
+      vaccine_support: {
+        category: "권익 보호",
+        badge: "국가 보상",
+        title: "예방접종 이상반응 국가피해보상 신청 지원",
+        desc: "국가예방접종 후 불가피하게 발생한 중증 이상반응에 대해 진료비, 간병비, 장애 일시보상금 및 사망 일시보상금을 국가가 심의하여 보상해 드립니다.",
+        howToUse: "접종 후 이상반응 발생 시 진료확인서 및 의무기록을 첨부하여 주소지 관할 보건소에 신청",
+        linkText: "예방접종 피해보상 제도 안내 ↗",
+        linkUrl: "https://nip.kdca.go.kr"
+      },
+      health_data: {
+        category: "공공 정보",
+        badge: "신뢰도 100%",
+        title: "국가건강정보포털 & 국민건강영양조사 빅데이터 개방",
+        desc: "인터넷에 떠도는 출처 불명의 잘못된 건강 정보 대신, 대한민국 보건당국과 의학회가 공인한 1,300여 종 질환 정보와 한국인 표준 건강통계를 무료로 열람할 수 있습니다.",
+        howToUse: "국가건강정보포털(health.kdca.go.kr)에서 질환명 바로 검색",
+        linkText: "국가건강정보포털 바로가기 ↗",
+        linkUrl: "https://health.kdca.go.kr"
+      }
+    }
+  }
+};
+
+
+/**
+ * 질병관리청(KDCA) 소개 웹 애플리케이션 프런트엔드 스크립트
+ * - 순수 JavaScript (No build, No framework)
+ * - 로컬 환경(file:// 더블클릭) 완벽 호환
+ */
+
+document.addEventListener("DOMContentLoaded", () => {
+  initHeroStats();
+  initBenefitSurvey();
+  initDuties();
+  initNewsSection();
+  initTrendsSection();
+  initVaccineGuide();
+  initQuiz();
+});
+
+// 1. 히어로 통계 영역 렌더링
+function initHeroStats() {
+  const statsContainer = document.getElementById("hero-stats-container");
+  if (!statsContainer || !KDCA_DATA.overview.stats) return;
+
+  statsContainer.innerHTML = KDCA_DATA.overview.stats
+    .map(
+      (s) => `
+    <div class="stat-item">
+      <div class="stat-val">${s.value}</div>
+      <div class="stat-lbl">${s.label}</div>
+      <div class="stat-desc">${s.desc}</div>
+    </div>
+  `
+    )
+    .join("");
+}
+
+// 2. 주요 5대 핵심 업무 렌더링
+function initDuties() {
+  const dutiesGrid = document.getElementById("duties-grid");
+  if (!dutiesGrid || !KDCA_DATA.coreDuties) return;
+
+  // SVG 아이콘 맵
+  const iconMap = {
+    "shield-virus": `
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        <circle cx="12" cy="12" r="3"/>
+        <line x1="12" y1="6" x2="12" y2="7"/>
+        <line x1="12" y1="17" x2="12" y2="18"/>
+        <line x1="6" y1="12" x2="7" y2="12"/>
+        <line x1="17" y1="12" x2="18" y2="12"/>
+      </svg>
+    `,
+    syringe: `
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m18 2 4 4"/>
+        <path d="m17 7 3-3"/>
+        <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5"/>
+        <path d="m9 11 4 4"/>
+        <path d="m5 19-3 3"/>
+        <path d="m14 4 6 6"/>
+      </svg>
+    `,
+    "heart-pulse": `
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+        <path d="M3.22 12H9.5l1.5-3 2 6.5 1.5-3.5h4.28"/>
+      </svg>
+    `,
+    "plane-arrival": `
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M2 22h20"/>
+        <path d="M19 16V8a2 2 0 0 0-2-2H7L3 10v6l4-2h10l2 2Z"/>
+        <line x1="12" y1="12" x2="12" y2="16"/>
+      </svg>
+    `,
+    microscope: `
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 18h8"/>
+        <path d="M3 22h18"/>
+        <path d="M14 22a7 7 0 1 0 0-14h-1"/>
+        <path d="M9 14h2"/>
+        <path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/>
+        <path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/>
+      </svg>
+    `
+  };
+
+  dutiesGrid.innerHTML = KDCA_DATA.coreDuties
+    .map(
+      (duty) => `
+    <div class="duty-card">
+      <div class="duty-top">
+        <div class="duty-icon-box">
+          ${iconMap[duty.icon] || iconMap["shield-virus"]}
+        </div>
+        <span class="duty-badge">${duty.badge}</span>
+      </div>
+      <h3 class="duty-title">${duty.title}</h3>
+      <p class="duty-summary">${duty.summary}</p>
+      <ul class="duty-details-list">
+        ${duty.details.map((item) => `<li>${item}</li>`).join("")}
+      </ul>
+      <div class="duty-tip-box">${duty.tip}</div>
+    </div>
+  `
+    )
+    .join("");
+}
+
+// 3. 최신 뉴스 및 보도자료 섹션 렌더링 및 검색/필터링
+let currentFilter = "all";
+let currentSearch = "";
+
+function initNewsSection() {
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  const searchInput = document.getElementById("news-search-input");
+
+  // 필터 버튼 클릭 이벤트
+  filterBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      filterBtns.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      currentFilter = btn.getAttribute("data-filter");
+      renderNewsGrid();
+    });
+  });
+
+  // 검색창 인풋 이벤트
+  if (searchInput) {
+    searchInput.addEventListener("input", (e) => {
+      currentSearch = e.target.value.trim().toLowerCase();
+      renderNewsGrid();
+    });
+  }
+
+  renderNewsGrid();
+}
+
+function renderNewsGrid() {
+  const newsGrid = document.getElementById("news-grid");
+  if (!newsGrid || !KDCA_DATA.newsList) return;
+
+  const filtered = KDCA_DATA.newsList.filter((item) => {
+    // 1) 필터 매칭
+    const matchesFilter =
+      currentFilter === "all" ||
+      (currentFilter === "official" && item.sourceType === "official") ||
+      (currentFilter === "press" && item.sourceType === "press");
+
+    // 2) 검색어 매칭
+    const matchesSearch =
+      !currentSearch ||
+      item.title.toLowerCase().includes(currentSearch) ||
+      item.summary.toLowerCase().includes(currentSearch) ||
+      item.source.toLowerCase().includes(currentSearch) ||
+      item.badge.toLowerCase().includes(currentSearch);
+
+    return matchesFilter && matchesSearch;
+  });
+
+  if (filtered.length === 0) {
+    newsGrid.innerHTML = `
+      <div style="grid-column: 1 / -1; text-align: center; padding: 48px 0; color: #64748b;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin: 0 auto 12px; display: block;">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <p style="font-weight: 600; font-size: 16px;">일치하는 뉴스나 보도자료를 찾을 수 없습니다.</p>
+        <p style="font-size: 13.5px; margin-top: 6px;">다른 검색어나 '전체보기'를 눌러 확인해보세요.</p>
+      </div>
+    `;
+    return;
+  }
+
+  newsGrid.innerHTML = filtered
+    .map(
+      (item) => `
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="news-source-tag ${item.sourceType === "official" ? "official" : ""}">
+          ${item.sourceType === "official" ? "🏛️" : "📰"} ${item.source}
+        </span>
+        <span class="news-date">${item.date}</span>
+      </div>
+      <h4 class="news-title">${item.title}</h4>
+      <p class="news-summary">${item.summary}</p>
+      <div class="news-footer">
+        <span class="news-badge">${item.badge}</span>
+        <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="news-link-btn" title="원문 보기 (새 창)">
+          원문 보기 ›
+        </a>
+      </div>
+    </article>
+  `
+    )
+    .join("");
+}
+
+// 4. 최신 보건 동향 렌더링
+function initTrendsSection() {
+  const trendsListContainer = document.getElementById("trends-list-container");
+  if (!trendsListContainer || !KDCA_DATA.trends) return;
+
+  trendsListContainer.innerHTML = KDCA_DATA.trends
+    .map(
+      (t) => `
+    <div class="trend-item-row">
+      <div class="trend-header-line">
+        <span class="trend-title-txt">${t.title}</span>
+        <span class="trend-status-tag status-${t.severity}">${t.severity}</span>
+      </div>
+      <p class="trend-desc-txt">${t.content}</p>
+      <div class="trend-action-tip">안내: ${t.action}</div>
+    </div>
+  `
+    )
+    .join("");
+}
+
+// 5. 나에게 맞는 예방접종 가이드 탭 기능
+function initVaccineGuide() {
+  const tabBtns = document.querySelectorAll(".vaccine-tab-btn");
+  const contentContainer = document.getElementById("vaccine-content-container");
+  if (!contentContainer || !KDCA_DATA.vaccineGuide) return;
+
+  function renderGuide(key) {
+    const data = KDCA_DATA.vaccineGuide[key];
+    if (!data) return;
+
+    contentContainer.innerHTML = `
+      <div class="vaccine-content-box">
+        <div class="vaccine-content-title">${data.title}</div>
+        <div class="vaccine-content-desc">${data.desc}</div>
+        <ul class="vaccine-item-list">
+          ${data.items.map((it) => `<li>${it}</li>`).join("")}
+        </ul>
+        <div style="margin-top: 16px; padding-top: 12px; border-top: 1px dashed #cbd5e1; font-size: 12px; color: #64748b;">
+          ※ 상세한 개인별 접종 이력과 잔여 백신 조회는 <a href="https://nip.kdca.go.kr" target="_blank" style="color: #0077c8; font-weight: 700; text-decoration: underline;">질병청 예방접종도우미 누리집</a>에서 확인하실 수 있습니다.
+        </div>
+      </div>
+    `;
+  }
+
+  tabBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      tabBtns.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      const key = btn.getAttribute("data-target");
+      renderGuide(key);
+    });
+  });
+
+  // 초기 렌더링 (영유아)
+  renderGuide("infant");
+}
+
+// 6. 감염병 상식 OX 퀴즈 인터랙션
+let currentQuizIdx = 0;
+
+function initQuiz() {
+  const questionEl = document.getElementById("quiz-question-txt");
+  const numberEl = document.getElementById("quiz-number-indicator");
+  const resultBox = document.getElementById("quiz-result-box");
+  const nextBtn = document.getElementById("btn-next-quiz");
+  const btnTrue = document.getElementById("btn-quiz-o");
+  const btnFalse = document.getElementById("btn-quiz-x");
+
+  if (!questionEl || !KDCA_DATA.quiz) return;
+
+  function loadQuiz(idx) {
+    const q = KDCA_DATA.quiz[idx];
+    questionEl.textContent = `Q${idx + 1}. ${q.q}`;
+    numberEl.textContent = `문제 ${idx + 1} / ${KDCA_DATA.quiz.length}`;
+    resultBox.style.display = "none";
+    resultBox.className = "quiz-result-box";
+    nextBtn.style.display = "none";
+    btnTrue.disabled = false;
+    btnFalse.disabled = false;
+  }
+
+  function handleAnswer(userChoice) {
+    const q = KDCA_DATA.quiz[currentQuizIdx];
+    const isCorrect = userChoice === q.answer;
+
+    btnTrue.disabled = true;
+    btnFalse.disabled = true;
+
+    resultBox.style.display = "block";
+    if (isCorrect) {
+      resultBox.className = "quiz-result-box correct";
+      resultBox.innerHTML = `<strong>정답입니다.</strong><br>${q.explanation}`;
+    } else {
+      resultBox.className = "quiz-result-box wrong";
+      resultBox.innerHTML = `<strong>오답입니다.</strong><br>${q.explanation}`;
+    }
+
+    nextBtn.style.display = "block";
+    if (currentQuizIdx === KDCA_DATA.quiz.length - 1) {
+      nextBtn.textContent = "처음으로 돌아가기 ↺";
+    } else {
+      nextBtn.textContent = "다음 질문 풀기 ›";
+    }
+  }
+
+  btnTrue.addEventListener("click", () => handleAnswer(true));
+  btnFalse.addEventListener("click", () => handleAnswer(false));
+
+  nextBtn.addEventListener("click", () => {
+    currentQuizIdx = (currentQuizIdx + 1) % KDCA_DATA.quiz.length;
+    loadQuiz(currentQuizIdx);
+  });
+
+  loadQuiz(0);
+}
+
+// 7. "나는 이 기관으로부터 어떤 도움을 받을 수 있을까?" 맞춤 혜택 진단 설문
+function initBenefitSurvey() {
+  const stageGrid = document.getElementById("survey-lifestage-grid");
+  const interestGrid = document.getElementById("survey-interest-grid");
+  const submitBtn = document.getElementById("btn-survey-submit");
+  const resetBtn = document.getElementById("btn-survey-reset");
+  const resultsWrapper = document.getElementById("benefit-results-wrapper");
+  const resultsContainer = document.getElementById("benefit-cards-container");
+  const resultsCountEl = document.getElementById("results-count-num");
+  const resultsSubtext = document.getElementById("results-subtext-txt");
+
+  if (!stageGrid || !interestGrid || !KDCA_DATA.survey) return;
+
+  let selectedStage = null;
+  const selectedInterests = new Set();
+
+  // 1단계 생애주기 카드 렌더링
+  stageGrid.innerHTML = KDCA_DATA.survey.lifeStages
+    .map(
+      (s) => `
+    <div class="survey-opt-card" data-stage-id="${s.id}" role="radio" aria-checked="false" tabindex="0">
+      <div class="opt-icon">${s.icon}</div>
+      <div class="opt-info">
+        <div class="opt-title">${s.title}</div>
+        <div class="opt-desc">${s.desc}</div>
+      </div>
+    </div>
+  `
+    )
+    .join("");
+
+  // 2단계 상황/관심사 카드 렌더링
+  interestGrid.innerHTML = KDCA_DATA.survey.interests
+    .map(
+      (i) => `
+    <div class="survey-opt-card" data-interest-id="${i.id}" role="checkbox" aria-checked="false" tabindex="0">
+      <div class="opt-icon">${i.icon}</div>
+      <div class="opt-info">
+        <div class="opt-title">${i.title}</div>
+        <div class="opt-desc">${i.desc}</div>
+      </div>
+    </div>
+  `
+    )
+    .join("");
+
+  // 1단계 클릭 이벤트 (단일 선택 토글)
+  stageGrid.querySelectorAll(".survey-opt-card").forEach((card) => {
+    card.addEventListener("click", () => {
+      const stageId = card.getAttribute("data-stage-id");
+      if (selectedStage === stageId) {
+        selectedStage = null;
+        card.classList.remove("selected");
+        card.setAttribute("aria-checked", "false");
+      } else {
+        selectedStage = stageId;
+        stageGrid.querySelectorAll(".survey-opt-card").forEach((c) => {
+          c.classList.remove("selected");
+          c.setAttribute("aria-checked", "false");
+        });
+        card.classList.add("selected");
+        card.setAttribute("aria-checked", "true");
+      }
+    });
+  });
+
+  // 2단계 클릭 이벤트 (복수 선택 토글)
+  interestGrid.querySelectorAll(".survey-opt-card").forEach((card) => {
+    card.addEventListener("click", () => {
+      const interestId = card.getAttribute("data-interest-id");
+      if (selectedInterests.has(interestId)) {
+        selectedInterests.delete(interestId);
+        card.classList.remove("selected");
+        card.setAttribute("aria-checked", "false");
+      } else {
+        selectedInterests.add(interestId);
+        card.classList.add("selected");
+        card.setAttribute("aria-checked", "true");
+      }
+    });
+  });
+
+  // 설문 결과 도출 및 렌더링
+  submitBtn.addEventListener("click", () => {
+    const matchedBenefitKeys = new Set();
+    const b = KDCA_DATA.survey.benefits;
+
+    // 생애주기별 매핑
+    if (selectedStage === "child_parent") {
+      matchedBenefitKeys.add("child_parent");
+      matchedBenefitKeys.add("child_notice");
+    } else if (selectedStage === "senior") {
+      matchedBenefitKeys.add("senior_vaccine");
+      matchedBenefitKeys.add("chronic");
+    } else if (selectedStage === "pregnant") {
+      matchedBenefitKeys.add("pregnant_support");
+    } else if (selectedStage === "adult") {
+      // 일반 성인의 경우 필수 상시 안내 매핑
+      matchedBenefitKeys.add("health_data");
+    }
+
+    // 상황/관심사별 매핑
+    if (selectedInterests.has("travel")) {
+      matchedBenefitKeys.add("travel");
+      matchedBenefitKeys.add("travel_vaccine");
+    }
+    if (selectedInterests.has("chronic")) {
+      matchedBenefitKeys.add("chronic");
+    }
+    if (selectedInterests.has("symptoms")) {
+      matchedBenefitKeys.add("symptoms");
+    }
+    if (selectedInterests.has("vaccine_support")) {
+      matchedBenefitKeys.add("vaccine_support");
+    }
+    if (selectedInterests.has("health_data")) {
+      matchedBenefitKeys.add("health_data");
+    }
+
+    // 만약 아무것도 선택하지 않은 경우 기본 전 국민 핵심 혜택 추천
+    if (matchedBenefitKeys.size === 0) {
+      matchedBenefitKeys.add("symptoms");
+      matchedBenefitKeys.add("health_data");
+      matchedBenefitKeys.add("travel");
+      resultsSubtext.textContent =
+        "선택 항목이 없어 모든 대한민국 국민이 누릴 수 있는 질병관리청 대표 핵심 서비스를 추천해 드립니다.";
+    } else {
+      resultsSubtext.textContent =
+        "선택하신 생애주기와 건강 관심사에 맞추어 국가에서 제공하는 지원 및 서비스를 정리했습니다.";
+    }
+
+    // 혜택 카드 생성
+    const resultList = Array.from(matchedBenefitKeys).map((key) => b[key]).filter(Boolean);
+    resultsCountEl.textContent = `${resultList.length}건`;
+
+    resultsContainer.innerHTML = resultList
+      .map(
+        (item) => `
+      <div class="benefit-card">
+        <div class="benefit-meta-line">
+          <span class="benefit-cat-tag">${item.category}</span>
+          <span class="benefit-badge-pill">${item.badge}</span>
+        </div>
+        <h4 class="benefit-title">${item.title}</h4>
+        <p class="benefit-desc">${item.desc}</p>
+        <div class="benefit-how-box">
+          <strong>💡 이용 방법:</strong> ${item.howToUse}
+        </div>
+        <a href="${item.linkUrl}" target="_blank" rel="noopener noreferrer" class="benefit-link-cta">
+          ${item.linkText}
+        </a>
+      </div>
+    `
+      )
+      .join("");
+
+    resultsWrapper.style.display = "block";
+
+    // 결과 위치로 부드럽게 스크롤 이동
+    setTimeout(() => {
+      resultsWrapper.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
+  });
+
+  // 초기화 버튼 이벤트
+  resetBtn.addEventListener("click", () => {
+    selectedStage = null;
+    selectedInterests.clear();
+    stageGrid.querySelectorAll(".survey-opt-card").forEach((c) => {
+      c.classList.remove("selected");
+      c.setAttribute("aria-checked", "false");
+    });
+    interestGrid.querySelectorAll(".survey-opt-card").forEach((c) => {
+      c.classList.remove("selected");
+      c.setAttribute("aria-checked", "false");
+    });
+    resultsWrapper.style.display = "none";
+  });
+}
+
+
+</script>
+</body>
+</html>
